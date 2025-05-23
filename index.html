@@ -1,0 +1,56 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <script>
+                let calculator = {           // JS object{}
+        
+        //1. P:V,
+        result:0,
+        
+        //2. Method
+        //constructor
+        
+        add:function(n){
+            this.result +=n;                //this is an internal object
+            return this;
+            
+        },
+        sub:function(n){                 // this is an internal object
+            this.result -=n;
+            return this;
+            
+            
+        },
+        
+        mul:function(n){
+            this.result *=n;              // this is an internal object
+            return this;
+        },
+
+
+        div:function(n){                 // this is an internal object
+            this.result /=n;
+            return this;
+        },
+        result2:function(){ 
+            return  this.result ;                // this is an internal object
+                    
+        },
+        };
+
+        //2.function calling/invoking through method chaining
+                    // object.method
+        
+        let result3 =   calculator.add(100).sub(20).mul(2).div(4).result2();
+        console.log(result3);
+
+
+        
+            </script>
+        </body>
+        </html>
